@@ -45,6 +45,7 @@ void ServoCounter::moveTo(uint8_t number){
   _actPos = number;
 }
 
+
 void ServoCounter::Inc(){
   if (_actPos == 99) return;
   moveTo(_actPos + 1);
@@ -57,4 +58,15 @@ void ServoCounter::Dec(){
 
 void ServoCounter::Set(uint8_t pos){
   moveTo(pos);
+}
+
+void ServoCounter::Move(uint8_t pos){
+  _servoDeci.write(pos);
+}
+
+void ServoCounter::MoveMin(){
+  _servoDeci.write(0);
+  delay(2000);
+  _servoDeci.write(200);
+  delay(2000);
 }

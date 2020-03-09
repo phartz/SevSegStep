@@ -32,12 +32,16 @@ void loop() {
   btnDown.tick();
   btnUp.tick();
 
-  for (int i = 1; i < 11; i++)
-  {
-    continue;
-    servoCounter.Set(i * 10);
-    delay(1000);
-  }
+  servoCounter.Move(90);
+
+  // servoCounter.MoveMin();
+
+  // for (int i = 1; i < 11; i++)
+  // {
+  //   continue;
+  //   servoCounter.Set(i * 10);
+  //   delay(1000);
+  // }
   
   // servoCounter.Set(random(100));
   // delay(2000);

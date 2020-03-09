@@ -33,6 +33,9 @@ public:
   void Inc();
   void Dec();
 
+  void MoveMin();
+  void Move(uint8_t);
+
   void Set(uint8_t);
 };
 
